@@ -1,3 +1,21 @@
+.example-full-width {
+    width: 80%;
+    margin-top: 80px;
+}
+
+.pswd-width {
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.mat-button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 80%;
+    color: white;
+    height: 40px;
+    background-color: rgb(6, 63, 81);
+}
 .navbar {
     justify-content: space-between;
 }

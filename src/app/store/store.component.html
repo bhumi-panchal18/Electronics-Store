@@ -1,0 +1,38 @@
+<mat-toolbar>
+    <span class="spacing"></span>
+    <button mat-button><mat-icon>add</mat-icon> Add Items</button>
+    <button mat-button [matMenuTriggerFor]="filter"> <mat-icon>filter_list</mat-icon>Filter</button>
+    <mat-menu #filter="matMenu">
+        <button mat-menu-item>Type</button>
+        <button mat-menu-item>Rating</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="sort"> <mat-icon>sort</mat-icon>Sort by</button>
+    <mat-menu #sort="matMenu">
+        <button mat-menu-item>Low to high</button>
+        <button mat-menu-item>High to low</button>
+    </mat-menu>
+</mat-toolbar>
+
+<ul class="flex-container">
+    <li class="flex-item" *ngFor="let appliance of appliances">
+        <mat-card>
+            <img mat-card-lg-image src="{{ appliance.imgPath }}" alt="{{ appliance.name }}">
+            <mat-card-content>
+                <p>
+                    {{ appliance.name }}
+                    <br>
+                    {{ appliance.desc}}
+                    <br>
+                    {{ appliance.types}}
+                </p>
+            </mat-card-content>
+            <h3>₹{{ appliance.price }}</h3>
+            <mat-card-actions style="display: flex; justify-content: flex-end">
+                <button mat-button (click)="openAppliance()"> Edit </button>
+                <button mat-button>Add to cart</button>
+            </mat-card-actions>
+
+
+        </mat-card>
+    </li>
+</ul>

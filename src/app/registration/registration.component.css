@@ -1,0 +1,18 @@
+.pswd-width {
+    width: 80%;
+}
+
+
+.mat-button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 80%;
+    color: white;
+    height: 40px;
+    background-color: rgb(6, 63, 81);
+}
+.name-container mat-form-field + mat-form-field {
+    margin-top: 80px;
+    margin-left: 20px;
+    flex-shrink: initial;
+}

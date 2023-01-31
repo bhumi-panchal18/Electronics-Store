@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'e-shop';
+  title = 'E-shop';
+  isActive = true;
+  opened = false;
 }
