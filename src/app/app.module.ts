@@ -11,6 +11,9 @@ import { CartComponent } from './cart/cart.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { DetailComponent } from './detail/detail.component';
 import { ApplianceDetailComponent } from './store/appliance-detail/appliance-detail.component';
+import { PopupComponent } from './popup/popup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,16 +24,19 @@ import { ApplianceDetailComponent } from './store/appliance-detail/appliance-det
     CartComponent,
     DialogComponent,
     DetailComponent,
-    ApplianceDetailComponent
+    ApplianceDetailComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

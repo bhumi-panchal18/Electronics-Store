@@ -1,33 +1,34 @@
-
-<div class="name-container">
-    <mat-form-field appearance="fill">
-        <mat-label>Enter Name</mat-label>
-        <input matInput placeholder="Name" required>
+<form [formGroup]="signup" (ngSubmit)="signupData(signup)">
+    <div class="name-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Name</mat-label>
+            <input matInput placeholder="Name" required formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    
+    <mat-form-field class="pswd-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Email" required formControlName="emailID">
+        <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
-    <mat-form-field appearance="fill">
-        <mat-label>Gender</mat-label>
-        <mat-select>
-        <mat-option value="option">Male</mat-option>
-        <mat-option value="option">Female</mat-option>
-        </mat-select>
+    
+    <mat-form-field class="pswd-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" required formControlName="password">
+        <mat-icon matSuffix>vpn_key</mat-icon>
     </mat-form-field>
-</div>
-
-<mat-form-field class="pswd-width" appearance="fill">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput placeholder="Email" required>
-    <mat-icon matSuffix>email</mat-icon>
-</mat-form-field>
-
-<mat-form-field class="pswd-width" appearance="fill">
-    <mat-label>Password</mat-label>
-    <input type="password" matInput placeholder="Password" required>
-    <mat-icon matSuffix>vpn_key</mat-icon>
-</mat-form-field>
-
-<mat-form-field class="pswd-width" appearance="fill">
-    <mat-label>Confirm Password</mat-label>
-    <input type="password" matInput placeholder="Password" required>
-    <mat-icon matSuffix>vpn_key</mat-icon>
-</mat-form-field>
-<button mat-button class="">Register</button>
+    
+    <mat-form-field class="pswd-width" appearance="fill">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput placeholder="Password" required formControlName="confirmpass">
+        <mat-icon matSuffix>vpn_key</mat-icon>
+    </mat-form-field>
+    <button mat-button type="submit">Register</button>
+</form>

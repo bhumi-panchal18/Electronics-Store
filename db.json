@@ -1,0 +1,24 @@
+{
+  "appliances": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 14",
+      "types": "Mobile",
+      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
+      "price": 7990200,
+      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
+      "quant": 50,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "name": "Apple iPhone 14",
+      "types": "0",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg",
+      "id": 2
+    }
+  ]
+}

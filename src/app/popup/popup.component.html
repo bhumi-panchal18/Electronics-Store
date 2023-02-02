@@ -1,0 +1,53 @@
+<form class="example-form" [formGroup]="applianceForm" (ngSubmit)="saveAppliance()">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput type="number" placeholder="ID" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="types">
+            <mat-option *ngFor="let type of types" [value]="type.value">
+                {{type.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Price</mat-label>
+        <span matPrefix>₹ &nbsp;</span>
+        <input type="number" matInput formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Quantity</mat-label>
+        <input matInput type="number" formControlName="quant">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Image</mat-label>
+        <input matInput type="url" formControlName="imgPath">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Technical specification</mat-label>
+        <textarea matInput type="text" formControlName="techspec"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput type="text" formControlName="desc"></textarea>
+    </mat-form-field>
+
+    <div>
+        <span class="spacing"></span>
+        <button mat-raised-button (click)="closepopup()">Close</button>
+        <button mat-raised-button color="primary">Save</button>
+    </div>
+    
+</form>
