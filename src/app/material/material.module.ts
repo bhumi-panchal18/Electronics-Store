@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
@@ -11,9 +12,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 const material = [
