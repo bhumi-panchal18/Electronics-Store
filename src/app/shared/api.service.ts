@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { applianceData } from '../Modal/applianceModel';
+import { applianceModel } from '../Modal/applianceModel';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,19 +11,19 @@ export class ApiService {
   constructor(private http: HttpClient) { }
   apiUrl:string = 'http://localhost:3000/appliances';
 
-  getAllAppliances(): Observable<applianceData[]> {
-    return this.http.get<applianceData[]>(this.apiUrl);
+  getAllAppliances(): Observable<applianceModel[]> {
+    return this.http.get<applianceModel[]>(this.apiUrl);
   }
 
-  getAppliancebyid(id:any): Observable<applianceData> {
-    return this.http.get<applianceData>(this.apiUrl+'/'+id);
+  getAppliancebyid(id:any): Observable<applianceModel> {
+    return this.http.get<applianceModel>(this.apiUrl+'/'+id);
   }
 
   removeAppliancebyid(id:any){
     return this.http.delete(this.apiUrl+'/'+id);
   }
 
-  createAppliance(appliancedata: applianceData) {
+  createAppliance(appliancedata: applianceModel) {
     return this.http.post(this.apiUrl, appliancedata);
   }
 

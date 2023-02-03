@@ -1,17 +1,4 @@
-<mat-toolbar>
-    <span class="spacing"></span>
-    <button mat-button><mat-icon>add</mat-icon> Add Items</button>
-    <button mat-button [matMenuTriggerFor]="filter"> <mat-icon>filter_list</mat-icon>Filter</button>
-    <mat-menu #filter="matMenu">
-        <button mat-menu-item>Type</button>
-        <button mat-menu-item>Rating</button>
-    </mat-menu>
-    <button mat-button [matMenuTriggerFor]="sort"> <mat-icon>sort</mat-icon>Sort by</button>
-    <mat-menu #sort="matMenu">
-        <button mat-menu-item>Low to high</button>
-        <button mat-menu-item>High to low</button>
-    </mat-menu>
-</mat-toolbar>
+
 
 <!-- <ul class="flex-container">
     <li class="flex-item" *ngFor="let appliance of appliances">
@@ -36,10 +23,18 @@
 </ul> -->
 
 <div class="mat-elevation-z8">
-    <div style="justify-content: end;">
-        <a mat-raised-button color="primary" (click)="openPopup('')" style="margin: 2%;">Add appliance</a>
-    </div>
-    <table mat-table [dataSource]="applianceData" class="mat-elevation-z8 demo-table">
+  <div style="text-align: end;">
+    <span class="spacing"></span>
+    <button mat-raised-button (click)="openPopup('')" style="margin: 1%" color="primary"><mat-icon>add</mat-icon> Add Appliance</button>
+    
+    <button mat-raised-button [matMenuTriggerFor]="sort" style="margin-right: 1%;"> <mat-icon>sort</mat-icon>Sort by</button>
+    <mat-menu #sort="matMenu">
+        <button mat-menu-item>Low to high</button>
+        <button mat-menu-item>High to low</button>
+    </mat-menu>
+  </div>
+
+    <table mat-table [dataSource]="finalApplianceData" class="mat-elevation-z8 demo-table">
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef> ID </th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -79,12 +74,14 @@
                 <div>
                     <a mat-button (click)="editAppliance(element.id)"><mat-icon >edit</mat-icon></a>   
                     <a mat-button (click)="removeAppliance(element.id)"><mat-icon>delete</mat-icon></a>
+                    <a mat-button ><mat-icon>shopping_cart</mat-icon></a>
                 </div> 
             </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
     </table>
-
+    <mat-paginator [pageSizeOptions]="[5,10,20]" [pageSize]="10" showFirstLastButtons aria-label="Select Page of periodic elements">
+    </mat-paginator>
 
 </div>

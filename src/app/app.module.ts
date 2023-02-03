@@ -8,13 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StoreComponent } from './store/store.component';
 import { CartComponent } from './cart/cart.component';
-import { DialogComponent } from './dialog/dialog.component';
 import { DetailComponent } from './detail/detail.component';
 import { ApplianceDetailComponent } from './store/appliance-detail/appliance-detail.component';
 import { PopupComponent } from './popup/popup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     StoreComponent,
     CartComponent,
-    DialogComponent,
     DetailComponent,
     ApplianceDetailComponent,
     PopupComponent

@@ -1,4 +1,4 @@
-export interface applianceData{
+export interface applianceModel{
     id: number;
     name: string;
     types: string;

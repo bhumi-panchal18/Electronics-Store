@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Route,Router } from '@angular/router';
-import { Appliance } from '../store/store.model';
 
 interface Type{
   value: string;

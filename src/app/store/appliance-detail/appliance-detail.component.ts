@@ -1,6 +1,5 @@
 import { Component, OnInit,Input,Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Appliance } from '../store.model';
 interface Type{
   value: string;
   viewValue: string;
@@ -11,7 +10,6 @@ interface Type{
   styleUrls: ['./appliance-detail.component.css']
 })
 export class ApplianceDetailComponent implements OnInit {
-  @Input() details: Appliance;
   hide = true;
   typesList: string[]=['Mobile','Laptop & Accessories','TV & Home Entertainment','Audio','Camera','Computer Peripherials','Musical Instruments']
   types: Type[] = [

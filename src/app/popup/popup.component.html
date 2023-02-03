@@ -12,7 +12,7 @@
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Type</mat-label>
         <mat-select formControlName="types">
-            <mat-option *ngFor="let type of types" [value]="type.value">
+            <mat-option *ngFor="let type of types" [value]="type.viewValue">
                 {{type.viewValue}}
             </mat-option>
         </mat-select>
@@ -47,7 +47,7 @@
     <div>
         <span class="spacing"></span>
         <button mat-raised-button (click)="closepopup()">Close</button>
-        <button mat-raised-button color="primary">Save</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
     </div>
-    
+
 </form>

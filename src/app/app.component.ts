@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'E-shop';
   isActive = true;
-  opened = false;
+  opened = true;
+  constructor(private route:Router){}
+  applyFilter(event: Event){
+    // const filterValue = (event.target as HTMLInputElement).value;
+    // this.route.na
+  }
 }
