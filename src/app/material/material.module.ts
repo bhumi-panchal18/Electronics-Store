@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatInputModule } from '@angular/material/input';
@@ -16,7 +15,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import {MatTreeModule} from '@angular/material/tree';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatSortModule } from '@angular/material/sort';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const material = [
   MatButtonModule,
@@ -35,7 +39,12 @@ const material = [
   MatListModule,
   MatDialogModule,
   MatPaginatorModule,
-  MatTreeModule
+  MatTreeModule,
+  MatSortModule,
+  MatBadgeModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatSnackBarModule
 ];
 @NgModule({
   imports: [material],

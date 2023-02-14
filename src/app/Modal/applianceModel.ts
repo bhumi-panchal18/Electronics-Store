@@ -1,4 +1,4 @@
-export interface applianceModel{
+export interface applianceModel {
     id: number;
     name: string;
     types: string;
@@ -8,3 +8,13 @@ export interface applianceModel{
     quant: number;
     imgPath: string;
 }
+
+export class cartModel {
+    id: number;
+    // name: string;
+    // types:string;
+    // imgPath: string;
+    // price: number;
+    // quant: number;
+}
+

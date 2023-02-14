@@ -1,87 +1,38 @@
 .example-full-width {
-    width: 80%;
-    margin-top: 80px;
+  width: 90%;
+  margin-top: 60px;
+}
+
+.mat-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pswd-width {
-    width: 80%;
-    margin-bottom: 50px;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .mat-button {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    width: 80%;
-    color: white;
-    height: 40px;
-    background-color: rgb(103, 58, 183);
-}
-.navbar {
-    justify-content: space-between;
+  margin-right: 40%;
 }
 
-span {
-    padding-right: 1rem;
-}
-
-/* .spacer {
-    flex: 1 1 auto;
-  } */
-
-.card-width {
-    max-height: 100px;
-}
-
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.mat-raised-button {
+  width: 25px;
+  height: 40px;
 }
 
 .main-div {
-    text-align: -webkit-center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  text-align: -webkit-center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-.example-stretched-tabs {
-    max-width: 700px;
-  }
-  .flex-left {
-    width: 40%;
-    height: 70%;
-    margin-left:300px;
-    background-color: white;
+.mat-card {
+  padding-top: 13%;
+  padding-bottom: 9%;
 }
-
-.flex-right {
-    width: 50%;
-    margin-right: 300px;
-}
-
-  .box.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .mat-toolbar {
-    position: relative;
-
-    z-index: 5;
-}
-mat-sidenav-container{
-  height: calc(205vh - 115vh);
-}
-
-mat-sidenav {
-  width: 200px;
-  background-color: #eee;
-}
-  

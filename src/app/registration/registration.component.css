@@ -2,17 +2,45 @@
     width: 80%;
 }
 
+.main-div {
+    text-align: -webkit-center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.example-full-width {
+    width: 80%;
+    margin-top: 40px;
+}
+
+.mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-card {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    max-width: 60%;
+}
+
+.gender-format {
+    margin-top: 3%;
+    align-items: start;
+    display: flex;
+    margin-left: 6%;
+    margin-bottom: 6%;
+}
 
 .mat-button {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    width: 80%;
-    color: white;
-    height: 40px;
-    background-color: rgb(103, 58, 183);
+    margin-top: 5%;
+    margin-right: 40%;
 }
-.name-container mat-form-field + mat-form-field {
-    margin-top: 80px;
-    margin-left: 20px;
-    flex-shrink: initial;
+
+.mat-radio-button {
+    margin: 0 12px;
 }

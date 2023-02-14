@@ -6,20 +6,32 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  apiUrl = 'http://localhost:3000/register';
-  getAll(){
+  apiUrl = 'http://localhost:3000/user';
+  getAll() {
     return this.http.get(this.apiUrl);
   }
-  getById(code: any){
-    return this.http.get(this.apiUrl + '/' + code);
+  getById(id: any) {
+    return this.http.get(this.apiUrl + '/' + id);
+  }
+  proceedRegister(inputData: any) {
+    return this.http.post(this.apiUrl, inputData);
   }
 
-  proceedRegister(inputData: any){
-    return this.http.post(this.apiUrl,inputData);
+  updateUser(code: any, inputData: any) {
+    return this.http.put(this.apiUrl + '/' + code, inputData);
   }
 
-  updateUser(code:any, inputData:any){
-    return this.http.put(this.apiUrl+'/'+code,inputData);
+  isLoggedIn() {
+    return sessionStorage.getItem('username') != null;
   }
 
+  getUserRole() {
+    return sessionStorage.getItem('userrole') != null ? sessionStorage.getItem('userrole')?.toString() : '';
+  }
+  updateuser(id: any, inputdata: any) {
+    return this.http.put(this.apiUrl + '/' + id, inputdata);
+  }
+  getuserrole() {
+    return this.http.get('http://localhost:3000/role');
+  }
 }

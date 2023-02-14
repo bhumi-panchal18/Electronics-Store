@@ -1,0 +1,12 @@
+.mat-row {
+    height: auto;
+}
+
+.mat-cell {
+    padding: 20px 100px 20px 0;
+}
+
+
+.main-div {
+    height: calc(100vh - 98px);
+  }

@@ -9,10 +9,13 @@ import { RegistrationComponent } from './registration/registration.component';
 import { StoreComponent } from './store/store.component';
 import { CartComponent } from './cart/cart.component';
 import { DetailComponent } from './detail/detail.component';
-import { ApplianceDetailComponent } from './store/appliance-detail/appliance-detail.component';
 import { PopupComponent } from './popup/popup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,8 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     StoreComponent,
     CartComponent,
     DetailComponent,
-    ApplianceDetailComponent,
-    PopupComponent
+    PopupComponent,
+    UsersComponent,
+    UpdatepopupComponent
   ],
   imports: [
     BrowserModule,

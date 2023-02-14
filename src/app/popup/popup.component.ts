@@ -3,8 +3,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ApiService } from '../shared/api.service';
 
+import {MatSnackBar, MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,} from '@angular/material/snack-bar';
 
-interface Type{
+interface Type {
   value: string;
   viewValue: string;
 }
@@ -15,17 +17,19 @@ interface Type{
 })
 export class PopupComponent implements OnInit {
   editApplianceData: any;
-  constructor(private builder: FormBuilder, private api: ApiService, private dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: any) { }
-  typesList: string[]=['Mobile','Laptop & Accessories','TV & Home Entertainment','Audio','Camera','Computer Peripherials','Musical Instruments']
-
+  constructor(private builder: FormBuilder, private api: ApiService, private dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: any, private _snackBar: MatSnackBar) { }
+  typesList: string[] = ['Mobile', 'Laptop & Accessories', 'TV & Home Entertainment', 'Audio', 'Camera', 'Computer Peripherials', 'Musical Instruments']
+    
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+    verticalPosition: MatSnackBarVerticalPosition = 'top';
   types: Type[] = [
-    {value: '0', viewValue: 'Mobile'},
-    {value: '1', viewValue: 'Laptop & Accessories'},
-    {value: '2', viewValue: 'TV & Home Entertainment'},
-    {value: '3', viewValue: 'Audio'},
-    {value: '4', viewValue: 'Camera'},    
-    {value: '5', viewValue: 'Computer Peripherals'},    
-    {value: '6', viewValue: 'Musical Instruments'}
+    { value: '0', viewValue: 'Mobile' },
+    { value: '1', viewValue: 'Laptop & Accessories' },
+    { value: '2', viewValue: 'TV & Home Entertainment' },
+    { value: '3', viewValue: 'Audio' },
+    { value: '4', viewValue: 'Camera' },
+    { value: '5', viewValue: 'Computer Peripherals' },
+    { value: '6', viewValue: 'Musical Instruments' }
   ];
   ngOnInit(): void {
     if (this.data.id != '' && this.data.id != null) {
@@ -58,18 +62,26 @@ export class PopupComponent implements OnInit {
 
   saveAppliance() {
     if (this.applianceForm.valid) {
-      const editId =this.applianceForm.getRawValue().id;
-      if (editId!='' && editId!=null){
-        this.api.updateAppliancebyid(editId,this.applianceForm.getRawValue()).subscribe(response => {
+      const editId = this.applianceForm.getRawValue().id;
+      if (editId != '' && editId != null) {
+        this.api.updateAppliancebyid(editId, this.applianceForm.getRawValue()).subscribe(response => {
           this.closepopup();
-          alert("Updated Successfully!")
+          this._snackBar.open("Updated Successfully!",'Close', {
+            duration: 2000,
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition
+          });
         });
-        
-      }else{
+
+      } else {
         this.api.createAppliance(this.applianceForm.value).subscribe(response => {
-        this.closepopup();
-        alert("Saved Successfully!")
-      });
+          this.closepopup();
+          this._snackBar.open("Saved Successfully!",'Close', {
+            duration: 2000,
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition
+          });
+        });
       }
     }
   }

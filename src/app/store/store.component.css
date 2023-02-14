@@ -1,4 +1,6 @@
-.spacing {
+/* card layout css */
+
+/* .spacing {
   flex: 1 1 auto;
 }
 
@@ -18,14 +20,31 @@
   width: 300px;
   height: 450px;
   font-size: 3em;
-}
+} */
 
 /* Table css */
 
-.mat-elevation-z8{
-  width: 2000px;
+
+.main-div {
+  height: calc(100vh - 98px);
 }
 
-.demo-table {
+.inner-div {
+  display: flex;
+  justify-content: end;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.appliance-button {
+  height: 40px;
+  margin-right: 2%;
+}
+
+table{
   width: 100%;
+}
+
+th{
+  width: 10%;
 }

@@ -1,13 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ApplianceDetailComponent } from './appliance-detail/appliance-detail.component';
 import { applianceModel } from '../Modal/applianceModel';
 import { PopupComponent } from '../popup/popup.component';
 import { ApiService } from '../shared/api.service';
-import { MatTab } from '@angular/material/tabs';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
+import { CartService } from '../shared/cart.service';
 
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+
+interface Type {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -16,11 +22,21 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class StoreComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatPaginator;
   appliancesData!: applianceModel[];
   finalApplianceData: any;
-  constructor(public dialog: MatDialog, private api: ApiService) { }
-  displayColumns: string[] = ["id", "name", "types", "desc", "price", "techspec", "quant", "imgPath", "action"];
-
+  constructor(public dialog: MatDialog, private api: ApiService, private route: Router, private cart: CartService) { }
+  displayColumns: string[] = ["id", "name", "types", "price", "quant", "desc", "techspec", "imgPath", "action"];
+  types1: Type[] = [
+    { value: '0', viewValue: 'All' },
+    { value: '1', viewValue: 'Laptop & Accessories' },
+    { value: '2', viewValue: 'TV & Home Entertainment' },
+    { value: '3', viewValue: 'Audio' },
+    { value: '4', viewValue: 'Camera' },
+    { value: '5', viewValue: 'Computer Peripherals' },
+    { value: '6', viewValue: 'Musical Instruments' },
+    { value: '7', viewValue: 'Mobile' }
+  ];
   ngOnInit(): void {
     this.loadAppliance();
   }
@@ -42,6 +58,10 @@ export class StoreComponent implements OnInit {
       this.appliancesData = response;
       this.finalApplianceData = new MatTableDataSource<applianceModel>(this.appliancesData);
       this.finalApplianceData.paginator = this.paginator;
+      this.finalApplianceData.sort = this.sort;
+      this.finalApplianceData.filterPredicate = function (record, filter) {
+        return record.types.toLocaleLowerCase() === filter.toLocaleLowerCase();
+      }
     }
     );
   }
@@ -50,10 +70,27 @@ export class StoreComponent implements OnInit {
     this.openPopup(id);
   }
 
-  removeAppliance(id: any) {
+  removeAppliance(id: number) {
     this.api.removeAppliancebyid(id).subscribe(response => {
       this.loadAppliance();
     });
   }
 
+  defaultValue = "All";
+
+  filterChange(event: any) {
+    const filterValue = event.value;
+    this.finalApplianceData.filter = filterValue.trim().toLowerCase();
+    if (filterValue == 'All') {
+      this.loadAppliance();
+    }
+  }
+
+  addToCart(item: any) {
+    if (item.quant != 0) {
+      this.cart.addProduct(item);
+    }
+  }
+
 }
+

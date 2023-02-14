@@ -1,30 +1,36 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center" class="navbar"
   [class.mat-elevation-z4]="isActive">
-  <div>
-    <!-- <button mat-button (click)="opened=opened"></button> -->
-    <button mat-button>{{title}}</button>
-  </div>
-  <!-- <span>
-    <button mat-button>
-      <mat-icon>exit_to_app</mat-icon>
-      Logout
-    </button>
-  </span> -->
+  <!-- <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button> -->
+  E-Shop
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav [(opened)]="opened" mode="side">
-    <mat-list>
-      <button mat-menu-item ><mat-icon>all_inbox</mat-icon>Products</button>
-
-      <mat-divider></mat-divider>
-      <button mat-menu-item routerLink="/cart"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
-      <mat-divider></mat-divider>
-      <!-- <button mat-menu-item routerLink="/login">Login/Register</button> -->
-      <mat-divider></mat-divider>
-      <button mat-menu-item routerLink="/login"><mat-icon>logout</mat-icon>Logout</button>
-    </mat-list>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <button mat-button routerLink="store" class="menu-button">
+      <mat-icon>all_inbox</mat-icon>
+      <span>Products</span>
+    </button>
+    <hr style="width:85%">
+    <button mat-button routerLink="cart" class="menu-button">
+      <mat-icon matBadge={{totalitem}} matBadgeColor="warn">shopping_cart</mat-icon>
+      <span>My Cart</span>
+    </button>
+    <hr style="width:85%">
+    <button mat-button routerLink="users" class="menu-button">
+      <mat-icon>account_circle</mat-icon>
+      <span>Users</span>
+    </button>
+    <hr style="width:85%">
+    <button mat-button routerLink="login" class="menu-button" (click)="openLogoutDialog()">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
   </mat-sidenav>
   <mat-sidenav-content>
-    <router-outlet></router-outlet>
+    <div class="contents">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

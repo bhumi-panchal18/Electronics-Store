@@ -3,15 +3,65 @@
     {
       "id": 1,
       "name": "Apple iPhone 14",
-      "types": "Mobile",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 2000,
+      "types": "Audio",
+      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR displays",
+      "price": 7990200,
       "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
+      "quant": 0,
       "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
     },
     {
       "id": 2,
+      "name": "Apple iPhone 11",
+      "types": "Computer Peripherals",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Apple iPhone 14",
+      "types": "Camera",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Apple iPhone 14",
+      "types": "Musical Instruments",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Apple iPhone 14",
+      "types": "Mobile",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Apple iPhone 14",
+      "types": "Musical Instruments",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
+      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "id": 9,
       "name": "Apple iPhone 14",
       "types": "Laptop & Accessories",
       "desc": "one year warranty",
@@ -21,169 +71,127 @@
       "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
     },
     {
-      "id": 3,
-      "name": "Mac Book",
-      "types": "TV & Home Entertainment",
-      "desc": "vfS Vf",
-      "price": 123456,
-      "techspec": "vsfvs",
-      "quant": 25,
-      "imgPath": "efvrdv.jpg"
-    },
-    {
-      "name": "AirtelTV",
-      "types": "TV & Home Entertainment",
-      "desc": "fesadcf",
-      "price": 123456,
-      "techspec": "wsadCDEc",
-      "quant": 12,
-      "imgPath": "vdyagcvd.jpg",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "Apple iPhone 14",
-      "types": "Audio",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
-      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Apple iPhone 14",
-      "types": "Camera",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
-      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Apple iPhone 14",
-      "types": "Mobile",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
-      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Apple iPhone 14",
-      "types": "Computer Peripherals",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
-      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
-    },
-    {
-      "id": 9,
-      "name": "Apple iPhone 14",
-      "types": "Musical Instruments",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
-      "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
-    },
-    {
       "id": 10,
       "name": "Apple iPhone 14",
-      "types": "Mobile",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
+      "types": "TV & Home Entertainment",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 0,
       "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
     },
     {
       "id": 11,
       "name": "Apple iPhone 14",
-      "types": "Mobile",
-      "desc": "128GB Midnight\n15.40 cm (6.1-inch) Super Retina XDR display",
-      "price": 7990200,
-      "techspec": "Operating System: IOS, Cellular Technology: 5G, Camera: 12MP TrueDepth camera",
-      "quant": 50,
+      "types": "Laptop & Accessories",
+      "desc": "one year warranty",
+      "price": 123456,
+      "techspec": "42inch led",
+      "quant": 10,
       "imgPath": "https://m.media-amazon.com/images/I/61cwywLZR-L._SX679_.jpg"
+    },
+    {
+      "name": "LG",
+      "types": "TV & Home Entertainment",
+      "desc": "asdfg",
+      "price": 123456,
+      "techspec": "asdfg",
+      "quant": 12,
+      "imgPath": "ASDFG.JPG",
+      "id": 12
     }
   ],
-  "signup": [
+  "user": [
     {
-      "name": "Bhumi",
-      "gender": "Female",
-      "emailID": "bvp@somaiya.edu",
+      "id": "bvp123",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "test1",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "staff",
+      "isActive": true
+    },
+    {
+      "id": "test2",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "test3",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "test4",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "test5",
+      "name": "bhumi",
+      "password": "bhumi",
+      "email": "bhumi@gmail.com",
+      "gender": "female",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "abc123",
+      "name": "ABc",
       "password": "123456",
-      "confirmpass": "123456",
-      "id": 1
+      "email": "abc@gmail.com",
+      "gender": "female",
+      "role": "user",
+      "isActive": true
     },
     {
-      "name": "Varsha",
-      "gender": "Female",
-      "emailID": "varsha@gmail.com",
-      "password": "123456789",
-      "confirmpass": "123456789",
-      "id": 2
+      "id": "test10",
+      "name": "Test",
+      "password": "12356789",
+      "email": "test@gmail.com",
+      "gender": "female",
+      "role": "staff",
+      "isActive": false
     },
     {
-      "name": "Bhumi",
-      "gender": "Female",
-      "emailID": "bvp@somaiya.edu",
-      "password": "123456",
-      "confirmpass": "123456",
-      "id": 3
-    },
-    {
-      "name": "ABC",
-      "gender": "Female",
-      "emailID": "abc@gmail.com",
-      "password": "123456",
-      "confirmpass": "123456",
-      "id": 4
-    },
-    {
-      "name": "Bhumi",
-      "gender": "Female",
-      "emailID": "bvp@somaiya.edu",
-      "password": "456789",
-      "confirmpass": "456789",
-      "id": 5
-    },
-    {
+      "id": "xyz123",
       "name": "xyz",
-      "gender": "Male",
-      "emailID": "xyz@gmail.com",
-      "password": "456789",
-      "confirmpass": "456789",
-      "id": 6
-    },
-    {
-      "name": "Bhumi",
-      "gender": "Female",
-      "emailID": "bhumi@gmail.com",
       "password": "123456",
-      "confirmpass": "123456",
-      "id": 7
-    },
-    {
-      "name": "ABCD",
-      "gender": "Female",
-      "emailID": "abcd@gmail.com",
-      "password": "789456",
-      "confirmpass": "789456",
-      "id": 8
-    },
-    {
-      "name": "abc",
-      "gender": "Male",
-      "emailID": "abcd@gmail.com",
-      "password": "456789",
-      "confirmpass": "456789",
-      "id": 9
+      "email": "xyz@gmail.com",
+      "gender": "female",
+      "role": "",
+      "isActive": true
     }
   ],
-  "register": []
+  "role": [
+    {
+      "code": "staff",
+      "name": "Staff"
+    },
+    {
+      "code": "user",
+      "name": "User"
+    }
+  ]
 }
