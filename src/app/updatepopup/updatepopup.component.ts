@@ -44,7 +44,6 @@ export class UpdatepopupComponent implements OnInit {
   loaduserdata(code: any) {
     this.service.getById(code).subscribe(res => {
       this.editdata = res;
-      console.log(this.editdata);
       this.registerform.setValue({
         id: this.editdata.id, name: this.editdata.name,
         password: this.editdata.password, email: this.editdata.email, gender: this.editdata.gender,

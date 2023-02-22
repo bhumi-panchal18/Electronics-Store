@@ -1,29 +1,32 @@
-<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center" class="navbar"
-  [class.mat-elevation-z4]="isActive">
+<mat-toolbar color="primary" class="mat-elevation-z8">
   <!-- <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button> -->
-  E-Shop
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  </style>
+  <p style="font-family: 'Pacifico', cursive; font-size: 30px; padding-left: 10px;color: white; justify-content: end;">e-Shop</p>
 </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z2" *ngIf="isMenuRequired">
     <button mat-button routerLink="store" class="menu-button">
       <mat-icon>all_inbox</mat-icon>
       <span>Products</span>
     </button>
     <hr style="width:85%">
-    <button mat-button routerLink="cart" class="menu-button">
-      <mat-icon matBadge={{totalitem}} matBadgeColor="warn">shopping_cart</mat-icon>
-      <span>My Cart</span>
+    <button  mat-button routerLink="cart" class="menu-button">
+      <mat-icon matBadgeColor="warn">shopping_basket</mat-icon>
+      <span>My shopping</span>
     </button>
     <hr style="width:85%">
-    <button mat-button routerLink="users" class="menu-button">
+    <button  mat-button routerLink="users" class="menu-button">
       <mat-icon>account_circle</mat-icon>
       <span>Users</span>
     </button>
     <hr style="width:85%">
-    <button mat-button routerLink="login" class="menu-button" (click)="openLogoutDialog()">
+    <button mat-button class="menu-button" (click)="openLogoutDialog()">
       <mat-icon>logout</mat-icon>
       <span>Logout</span>
     </button>
@@ -33,4 +36,5 @@
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

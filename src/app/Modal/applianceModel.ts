@@ -9,12 +9,15 @@ export interface applianceModel {
     imgPath: string;
 }
 
-export class cartModel {
+export interface CartModel {
     id: number;
-    // name: string;
-    // types:string;
-    // imgPath: string;
-    // price: number;
-    // quant: number;
+    name: string;
+    types: string;
+    desc: string;
+    amount: number;
+    techspec: string;
+    quantity: number;
+    imgPath: string;
+    uid: string
 }
 

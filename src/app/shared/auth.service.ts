@@ -10,7 +10,7 @@ export class AuthService {
   getAll() {
     return this.http.get(this.apiUrl);
   }
-  getById(id: any) {
+  getById(id: any) { 
     return this.http.get(this.apiUrl + '/' + id);
   }
   proceedRegister(inputData: any) {

@@ -50,5 +50,16 @@
 }
 
 .mat-cell {
-  padding: 20px 100px 20px 0;
+  padding: 0px 50px 0px 50px;
+  text-align: center;
+}
+th.mat-header-cell{
+  text-align: center;
+  font-size: small;
+  color: #4d4d4d;
+  background: #EEEDEF;
+}
+.mat-footer-cell{
+  text-align: end;
+  font-weight: 500;
 }

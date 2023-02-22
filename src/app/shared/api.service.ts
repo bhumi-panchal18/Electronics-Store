@@ -42,5 +42,8 @@ export class ApiService {
   updateAppliancebyid(id: any, applianceData: any) {
     return this.http.put(this.apiUrl + '/' + id, applianceData);
   }
+  updateAppliancebyqty(id:number,applianceData:applianceModel){
+    return this.http.put(this.apiUrl+'/'+id,applianceData)
+  }
 
 }

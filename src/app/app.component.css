@@ -63,10 +63,10 @@ mat-sidenav {
   margin: 16px;
   width: 200px;
   border-right: none;
-  background: rgb(103, 58, 183);
+  background: #673AB7;
   color: white;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 6px;
   justify-content: center;
 }
 

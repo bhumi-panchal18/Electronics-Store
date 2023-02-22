@@ -6,7 +6,20 @@
     padding: 20px 100px 20px 0;
 }
 
+.mat-header-cell {
+    font-size: small;
+    color: #4d4d4d;
+    background: #EEEDEF;
+}
 
 .main-div {
     height: calc(100vh - 98px);
-  }
+}
+
+.mat-row:hover>.mat-cell {
+    background: #EEEDEF;
+}
+
+.mat-header-row {
+    color: #EEEDEF;
+}

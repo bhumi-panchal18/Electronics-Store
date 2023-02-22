@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { applianceModel, cartModel } from '../Modal/applianceModel';
+import { applianceModel, CartModel } from '../Modal/applianceModel';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, map, Subscription, takeUntil, ReplaySubject } from 'rxjs';
@@ -8,6 +8,7 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { CartService } from '../shared/cart.service';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -18,23 +19,25 @@ import { CartService } from '../shared/cart.service';
 
 
 export class CartComponent implements OnInit {
-
-
   state: Observable<object>;
   destroy: ReplaySubject<boolean> = new ReplaySubject(1);
   @ViewChild(MatTable) table: MatTable<any>;
-  // @ViewChild(MatPaginator) paginator!: MatPaginator;
-  // @ViewChild(MatSort) sort!: MatPaginator;
 
-  displayedColumns: string[] = ["id", "name", "types", "price", "quant", "imgPath", "action"];
-  cartData: applianceModel[] = [];
-  constructor(private http: HttpClient, private route: Router, private activatedRoute: ActivatedRoute, private api: ApiService, private cart: CartService) { }
+  displayedColumns: string[] = ["id", "imgPath", "name", "types", "quantity", "amount"];
+  public products;
 
-  public products!: any[];
+  constructor(private http: HttpClient, 
+    private route: Router, 
+    private api: ApiService, 
+    private cart: CartService,
+    private userService:UserService) {
+  }
+
+
   ngOnInit(): void {
-    this.cart.getproduct().subscribe(res => {
-      console.log(this.products);
-      this.products = res;
+    let user = JSON.parse(sessionStorage.getItem('userrole'));
+    this.cart.getCartProducts(user.id).subscribe(res => {
+      this.products = res
     });
   }
 
@@ -43,12 +46,21 @@ export class CartComponent implements OnInit {
   }
 
   emptyCart() {
-    this.cart.removeCartElement();
+    let user = JSON.parse(sessionStorage.getItem('userrole'));
+    
+    this.cart.emptyCartItem(user.id).subscribe();
   }
 
-  deleteCartItem(item: any) {
-    this.cart.removeCartItem(item.id);
+  deleteCartItem(id: any) {
+    this.cart.removeCartItemByID(id).subscribe();
     this.table.renderRows();
   }
+  getTotalCost() {
+    return this.products.map(t => t.amount).reduce((acc, value) => acc + value, 0);
+  }
 
+  onChange($event, price) {
+    price *= $event.target.value
+    return price
+  }
 }

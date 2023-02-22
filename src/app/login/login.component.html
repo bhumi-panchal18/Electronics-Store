@@ -9,15 +9,20 @@
         <mat-form-field class="example-full-width">
           <mat-label>Username</mat-label>
           <input matInput formControlName="username">
+          <mat-error *ngIf="loginForm.get('username')">Enter username</mat-error>
+          
         </mat-form-field>
         <mat-form-field class="pswd-width">
           <mat-label>Password</mat-label>
           <input matInput type="password" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')">Enter password</mat-error>
         </mat-form-field>
+        
         <div>
           <button mat-button color="primary" routerLink="/register" color="primary" class="span">Create Account</button>
-          <button mat-raised-button color="primary">Login</button>
-        </div>
+          <button mat-raised-button color="primary" >Login</button>
+          <mat-error *ngIf=" login && !loginForm.valid">Username or password is incorrect.</mat-error>
+        </div>        
       </form>
     </mat-card-content>
     <router-outlet></router-outlet>
